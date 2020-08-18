@@ -28,6 +28,7 @@ apply plugin: 'io.spring.dependency-management'
         compile('org.springframework.boot:spring-boot-starter-mustache')
         testCompile('org.springframework.boot:spring-boot-starter-test')
         compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+        testCompile("org.springframework.security:spring-security-test")
     }
 
 group 'com.san.awspg'
