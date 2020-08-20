@@ -28,6 +28,7 @@ rebel.xml
 /build/
 /gradletasknamecache
 
+!gradle-wrapper.jar
 
 application-oauth.properties
 
