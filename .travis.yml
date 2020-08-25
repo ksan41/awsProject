@@ -18,9 +18,9 @@ script: "./gradlew clean build"
 
 
 before_deploy:
-  - zip -r awsProject *
+  - zip -r freelecsan-springboot2-webservice *
   - mkdir -p deploy
-  - mv awsProject.zip deploy/awsProject.zip
+  - mv freelecsan-springboot2-webservice.zip deploy/freelecsan-springboot2-webservice.zip
 
 deploy:
   - provider: s3
