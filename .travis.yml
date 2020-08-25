@@ -1,8 +1,7 @@
 language: java
 jdk:
   - openjdk8
-before_install:
-  - chmod +x ./gradlew
+
 
 branches:
   only:
@@ -26,14 +25,15 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: freelecsan-springboot2_build
+    bucket: freelecsan-springboot2-build
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
     local_dir: deploy
     wait-until-deployed: true
 
-
+before_install:
+  - chmod +x ./gradlew
 #CI 실행 완료 시 메일로 알람
 notifications:
   email:
